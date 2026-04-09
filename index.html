@@ -3,71 +3,276 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SpendTrail Support</title>
-  <meta name="description" content="Support site for SpendTrail, the expense tracker for iPhone and Apple Watch.">
+  <title>SpendTrail | Support</title>
+  <meta
+    name="description"
+    content="Official support site for SpendTrail, the local-first expense tracker for iPhone and Apple Watch."
+  >
+  <meta name="theme-color" content="#06111f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
-      <p class="eyebrow">SpendTrail</p>
-      <h1>Support</h1>
-      <p class="lead">
-        SpendTrail helps you track expenses across iPhone and Apple Watch.
-        This page is the public support website for the App Store listing.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="https://github.com/keaz/spendtrail-support/issues/new" target="_blank" rel="noreferrer">Open a Support Request</a>
-        <a class="button secondary" href="privacy.html">Privacy Policy</a>
+  <header class="site-header">
+    <div class="site-shell header-inner">
+      <a class="brand" href="https://keaz.github.io/" target="_blank" rel="noreferrer">
+        <span class="brand-mark">KR</span>
+        <span class="brand-copy">
+          <strong>SpendTrail</strong>
+          <span>Support and privacy</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#product">Product</a>
+        <a href="#implementation">Implementation</a>
+        <a href="#support">Support</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="nav-cta" href="https://github.com/keaz/spendtrail-support/issues/new" target="_blank" rel="noreferrer">
+        Open Support Request
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="site-shell hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">SpendTrail • iPhone + Apple Watch</p>
+          <h1>Support and privacy for a local-first expense tracker built for Apple platforms.</h1>
+          <p class="hero-lead">
+            SpendTrail helps you record expenses quickly, review category and location trends,
+            and keep your data in sync across your devices with private iCloud support.
+          </p>
+
+          <div class="action-row">
+            <a class="button button-primary" href="https://github.com/keaz/spendtrail-support/issues/new" target="_blank" rel="noreferrer">
+              Get Help
+            </a>
+            <a class="button button-secondary" href="privacy.html">
+              Read Privacy Policy
+            </a>
+          </div>
+
+          <div class="metric-grid" aria-label="Product highlights">
+            <article class="metric-card">
+              <strong>Local-first</strong>
+              <span>Expenses stay available on device even when iCloud is unavailable.</span>
+            </article>
+            <article class="metric-card">
+              <strong>Private sync</strong>
+              <span>CloudKit sync uses the private iCloud container tied to your Apple ID.</span>
+            </article>
+            <article class="metric-card">
+              <strong>Watch companion</strong>
+              <span>Quick logging and daily overview are available from Apple Watch.</span>
+            </article>
+            <article class="metric-card">
+              <strong>Optional location</strong>
+              <span>Location capture can be disabled and the app still works normally.</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="spotlight-panel">
+          <p class="panel-eyebrow">Implementation Snapshot</p>
+          <h2>What the app currently implements</h2>
+          <div class="stack-list">
+            <article class="stack-card">
+              <h3>Core Apple stack</h3>
+              <p>SwiftUI, SwiftData, CloudKit, Charts, and MapKit power the app and its support for analytics and place-aware history.</p>
+            </article>
+            <article class="stack-card">
+              <h3>Main app surfaces</h3>
+              <p>Dashboard, History, Add Expense, Trends, Locations, and Settings are the primary iPhone flows exposed in the app shell.</p>
+            </article>
+            <article class="stack-card">
+              <h3>Watch companion</h3>
+              <p>The Apple Watch experience includes a daily home view, sync status, nudges, and a dedicated quick-log expense flow.</p>
+            </article>
+            <article class="stack-card">
+              <h3>Operational details</h3>
+              <p>Support-facing behavior includes sync diagnostics, optional place guardrails, duplicate repair, and release documentation for App Store submission.</p>
+            </article>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="card">
-      <h2>How to get help</h2>
-      <p>
-        If you run into a problem, open a support request on GitHub and include:
-      </p>
-      <ul>
-        <li>Your device model and iOS or watchOS version</li>
-        <li>The version of SpendTrail you are using</li>
-        <li>What you expected to happen</li>
-        <li>What actually happened</li>
-        <li>Screenshots if they help explain the issue</li>
-      </ul>
-    </section>
+    <section class="content-section" id="product">
+      <div class="site-shell">
+        <div class="section-header">
+          <p class="section-kicker">Product</p>
+          <h2>What SpendTrail is built to do</h2>
+          <p>
+            The support site should reflect the real product, not a placeholder page. These are the user-facing capabilities
+            present in the current implementation.
+          </p>
+        </div>
 
-    <section class="card">
-      <h2>Frequently asked questions</h2>
-      <div class="faq">
-        <h3>How does sync work?</h3>
-        <p>
-          SpendTrail stores your data locally and uses your private iCloud account to sync data across your own devices when iCloud is available.
-        </p>
+        <div class="feature-grid">
+          <article class="panel feature-card">
+            <p class="card-label">Capture</p>
+            <h3>Fast daily expense logging</h3>
+            <p>SpendTrail supports both detailed entry and quick-add flows, with reusable presets and category defaults to reduce friction.</p>
+          </article>
 
-        <h3>Can I use the app without location access?</h3>
-        <p>
-          Yes. Location capture is optional. You can deny permission or turn off location capture in Settings and continue using the app normally.
-        </p>
+          <article class="panel feature-card">
+            <p class="card-label">Review</p>
+            <h3>Dashboard, history, and trends</h3>
+            <p>Users can inspect totals, averages, category breakdowns, search history, date filters, and trend charts across multiple ranges.</p>
+          </article>
 
-        <h3>How do I fix duplicate legacy records?</h3>
-        <p>
-          Open the app, go to Settings, and use <strong>Repair Legacy Duplicates</strong>. Normal sync checks do not automatically remove ambiguous same-minute records.
-        </p>
+          <article class="panel feature-card">
+            <p class="card-label">Places</p>
+            <h3>Location-aware spending views</h3>
+            <p>Location capture is optional, but when enabled the app can group expenses by place, render map-based views, and surface travel segments.</p>
+          </article>
 
-        <h3>How do I delete my data?</h3>
-        <p>
-          You can delete expenses directly inside the app. If you remove the app, local data is removed from the device. If iCloud sync is enabled, synced records remain in your private iCloud storage until you delete them from the app and sync again.
-        </p>
+          <article class="panel feature-card">
+            <p class="card-label">Sync</p>
+            <h3>Private iCloud-backed data sync</h3>
+            <p>The app is local-first and uses the private CloudKit database for cross-device sync, with recovery and maintenance actions in Settings.</p>
+          </article>
+
+          <article class="panel feature-card">
+            <p class="card-label">Watch</p>
+            <h3>Apple Watch quick logging</h3>
+            <p>The companion app focuses on fast capture, a daily snapshot, recent trends, and sync visibility from the wrist.</p>
+          </article>
+
+          <article class="panel feature-card">
+            <p class="card-label">Insights</p>
+            <h3>Forecasts and advanced analytics</h3>
+            <p>The implementation includes spend forecasting, recurring-pattern detection, anomaly alerts for saved places, and optional weekly insight generation when supported.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Useful links</h2>
-      <ul class="links">
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="https://github.com/keaz/spendtrail-support/issues" target="_blank" rel="noreferrer">Issue Tracker</a></li>
-      </ul>
+    <section class="content-section" id="implementation">
+      <div class="site-shell dual-grid">
+        <article class="panel detail-panel">
+          <p class="section-kicker">Implementation</p>
+          <h2>Architecture overview</h2>
+          <ul class="detail-list">
+            <li>The iPhone app is built in SwiftUI with a tab-based shell covering Dashboard, History, Add, Trends, Locations, and Settings.</li>
+            <li>Data is modeled with SwiftData and kept available locally by default.</li>
+            <li>When available, CloudKit sync uses the private container <code>iCloud.com.keaz.SpendTrail</code>.</li>
+            <li>Charts powers trend and breakdown views, while MapKit supports place search, maps, and location-based grouping.</li>
+            <li>The watchOS companion shares the same domain model and exposes quick-log, home dashboard, and sync status flows.</li>
+          </ul>
+        </article>
+
+        <article class="panel detail-panel">
+          <p class="section-kicker">Support Relevance</p>
+          <h2>Why the implementation matters for support</h2>
+          <ul class="detail-list">
+            <li>Sync issues are usually tied to iCloud availability, private database state, or delayed device reconciliation.</li>
+            <li>Location-related questions often come down to permission state or whether location capture is enabled in Settings.</li>
+            <li>Expense history and trends depend on recorded data ranges, selected filters, and category configuration.</li>
+            <li>Legacy duplicate repair is exposed in Settings for older ambiguous sync records.</li>
+            <li>Privacy questions map directly to the local-first storage model and private iCloud sync behavior.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="support">
+      <div class="site-shell support-grid">
+        <article class="panel detail-panel">
+          <p class="section-kicker">Support</p>
+          <h2>How to get help efficiently</h2>
+          <p class="section-copy">If you open a support request, include enough detail to make the issue reproducible.</p>
+          <ul class="detail-list">
+            <li>Your iPhone model or Apple Watch model and the iOS or watchOS version.</li>
+            <li>The SpendTrail app version and build if available.</li>
+            <li>What you expected to happen and what actually happened.</li>
+            <li>Whether the issue appears on iPhone, Apple Watch, or both.</li>
+            <li>Whether iCloud sync and location capture were enabled when the issue occurred.</li>
+            <li>Screenshots when they clarify the problem.</li>
+          </ul>
+        </article>
+
+        <article class="panel link-panel">
+          <p class="section-kicker">Links</p>
+          <h2>Useful resources</h2>
+          <div class="resource-list">
+            <a class="resource-card" href="privacy.html">
+              <strong>Privacy Policy</strong>
+              <span>Read the current data handling policy for the app.</span>
+            </a>
+            <a class="resource-card" href="https://github.com/keaz/spendtrail-support/issues" target="_blank" rel="noreferrer">
+              <strong>Issue Tracker</strong>
+              <span>Browse open issues or create a new public support request.</span>
+            </a>
+            <a class="resource-card" href="https://keaz.github.io/" target="_blank" rel="noreferrer">
+              <strong>Publisher Site</strong>
+              <span>Visit the main site aligned with the same brand system.</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="faq">
+      <div class="site-shell">
+        <div class="section-header">
+          <p class="section-kicker">FAQ</p>
+          <h2>Common questions</h2>
+          <p>These answers are based on the current app behavior and release documentation.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>How does sync work?</summary>
+            <p>SpendTrail stores data locally first and syncs across your Apple devices through your private iCloud CloudKit database when iCloud is available.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I use the app without location access?</summary>
+            <p>Yes. Location capture is optional. You can deny access or disable it later in Settings and continue using the app normally.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does the Apple Watch app work as a companion?</summary>
+            <p>Yes. The Apple Watch experience is designed around quick logging and a compact daily overview, using the same synced data model when iCloud is available.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I fix duplicate legacy records?</summary>
+            <p>Open SpendTrail, go to Settings, and use <strong>Repair Legacy Duplicates</strong>. That flow is intended for older ambiguous same-minute sync records.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I delete my data?</summary>
+            <p>You can delete expenses directly inside the app. Removing the app deletes local device data. If iCloud sync is enabled, synced records remain in your private iCloud storage until they are deleted from the app and synced again.</p>
+          </details>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <div>
+        <p class="footer-title">SpendTrail</p>
+        <p class="footer-copy">Support site for the local-first expense tracker for iPhone and Apple Watch.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://github.com/keaz/spendtrail-support/issues" target="_blank" rel="noreferrer">Issue Tracker</a>
+        <a href="https://keaz.github.io/" target="_blank" rel="noreferrer">keaz.github.io</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

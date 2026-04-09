@@ -3,67 +3,175 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SpendTrail Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for SpendTrail.">
+  <title>SpendTrail | Privacy Policy</title>
+  <meta
+    name="description"
+    content="Privacy Policy for SpendTrail, the local-first expense tracker for iPhone and Apple Watch."
+  >
+  <meta name="theme-color" content="#06111f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
-    <section class="hero compact">
-      <p class="eyebrow">SpendTrail</p>
-      <h1>Privacy Policy</h1>
-      <p class="lead">Effective date: March 10, 2026</p>
-      <div class="actions">
-        <a class="button secondary" href="index.html">Back to Support</a>
+  <header class="site-header">
+    <div class="site-shell header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">KR</span>
+        <span class="brand-copy">
+          <strong>SpendTrail</strong>
+          <span>Support and privacy</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#data">Data</a>
+        <a href="#use">Use</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="index.html">
+        Back to Support
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section hero-section-compact" id="overview">
+      <div class="site-shell single-column">
+        <div class="hero-copy hero-copy-wide">
+          <p class="kicker">SpendTrail • Privacy Policy</p>
+          <h1>Privacy policy for the SpendTrail iPhone and Apple Watch app.</h1>
+          <p class="hero-lead">
+            Effective date: March 9, 2026. This policy reflects the current release documentation
+            for SpendTrail and describes how expense records, optional notes, optional location
+            data, and iCloud sync metadata are handled.
+          </p>
+
+          <div class="action-row">
+            <a class="button button-primary" href="index.html">Back to Support</a>
+            <a class="button button-secondary" href="https://github.com/keaz/spendtrail-support/issues" target="_blank" rel="noreferrer">
+              Privacy Questions
+            </a>
+          </div>
+        </div>
+
+        <div class="privacy-highlight-grid">
+          <article class="panel feature-card">
+            <p class="card-label">Storage</p>
+            <h2>Local-first by default</h2>
+            <p>SpendTrail stores the expense records you create so they remain available on your device.</p>
+          </article>
+
+          <article class="panel feature-card">
+            <p class="card-label">Sync</p>
+            <h2>Private iCloud database</h2>
+            <p>When iCloud sync is enabled and available, records are stored in your private CloudKit database associated with your Apple ID.</p>
+          </article>
+
+          <article class="panel feature-card">
+            <p class="card-label">Control</p>
+            <h2>Optional location capture</h2>
+            <p>Location capture is best effort and optional. You can deny access or turn it off in Settings and still use the app normally.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="card prose">
-      <p>
-        SpendTrail stores expense records that you create, including category assignments,
-        timestamps, optional notes, and optional location information captured at the time of entry.
-      </p>
+    <section class="content-section" id="data">
+      <div class="site-shell policy-grid">
+        <article class="panel detail-panel">
+          <p class="section-kicker">Data We Collect</p>
+          <h2>Information stored by the app</h2>
+          <ul class="detail-list">
+            <li>Expense amounts and currency codes.</li>
+            <li>Category selections.</li>
+            <li>Timestamps for created, updated, and occurred-at dates.</li>
+            <li>Optional notes that you enter.</li>
+            <li>Optional location information such as coordinates, place name, locality, administrative area, and country.</li>
+            <li>iCloud sync status metadata needed to keep your devices in sync.</li>
+          </ul>
+        </article>
 
-      <h2>Data we collect</h2>
-      <ul>
-        <li>Expense amounts and currency codes</li>
-        <li>Category selections</li>
-        <li>Timestamps for created, updated, and occurred-at dates</li>
-        <li>Optional notes that you enter</li>
-        <li>Optional location information such as coordinates, place name, locality, administrative area, and country</li>
-        <li>iCloud sync status metadata needed to keep your devices in sync</li>
-      </ul>
+        <article class="panel detail-panel" id="use">
+          <p class="section-kicker">How Data Is Used</p>
+          <h2>Purpose of the stored information</h2>
+          <ul class="detail-list">
+            <li>To store and display your expenses inside the app.</li>
+            <li>To group expenses by category, date range, and location.</li>
+            <li>To sync your data across your own Apple devices through iCloud and CloudKit.</li>
+            <li>To troubleshoot sync issues locally on device.</li>
+          </ul>
+        </article>
 
-      <h2>How data is used</h2>
-      <ul>
-        <li>To store and display your expenses inside the app</li>
-        <li>To group expenses by category, date range, and location</li>
-        <li>To sync your data across your own Apple devices through iCloud and CloudKit</li>
-        <li>To troubleshoot sync issues locally on device</li>
-      </ul>
+        <article class="panel detail-panel">
+          <p class="section-kicker">Data Sharing</p>
+          <h2>How data is shared</h2>
+          <p class="section-copy">
+            SpendTrail does not sell your data. Expense records are stored locally on your device and,
+            when iCloud sync is enabled and available, in your private CloudKit database associated with your Apple ID.
+          </p>
+        </article>
 
-      <h2>Data sharing</h2>
-      <p>
-        SpendTrail does not sell your data. Expense records are stored locally on your device and,
-        when iCloud sync is enabled and available, in your private CloudKit database associated with your Apple ID.
-      </p>
+        <article class="panel detail-panel">
+          <p class="section-kicker">Retention</p>
+          <h2>How long data remains</h2>
+          <p class="section-copy">
+            Your data remains on your device until you delete it. If iCloud sync is enabled, synced
+            records remain in your private iCloud storage until they are deleted from the app and synced again.
+          </p>
+        </article>
+      </div>
+    </section>
 
-      <h2>Location data</h2>
-      <p>
-        Location capture is best effort and optional. You can deny permission or disable location capture in the app settings and still use SpendTrail normally.
-      </p>
+    <section class="content-section" id="contact">
+      <div class="site-shell dual-grid">
+        <article class="panel detail-panel">
+          <p class="section-kicker">Location Data</p>
+          <h2>Optional and best effort</h2>
+          <p class="section-copy">
+            SpendTrail can attach location context to new expenses when the feature is enabled and
+            the device permits access. You can deny permission or disable capture later in Settings
+            and continue using the app without location data.
+          </p>
+        </article>
 
-      <h2>Data retention</h2>
-      <p>
-        Your data remains on your device until you delete it. If iCloud sync is enabled, synced records remain in your private iCloud storage until deleted from the app and synced again.
-      </p>
-
-      <h2>Contact</h2>
-      <p>
-        For support requests or privacy questions, open an issue at
-        <a href="https://github.com/keaz/spendtrail-support/issues" target="_blank" rel="noreferrer">github.com/keaz/spendtrail-support/issues</a>.
-      </p>
+        <article class="panel link-panel">
+          <p class="section-kicker">Contact</p>
+          <h2>Privacy questions or support</h2>
+          <div class="resource-list">
+            <a class="resource-card" href="https://github.com/keaz/spendtrail-support/issues" target="_blank" rel="noreferrer">
+              <strong>Open a Privacy Question</strong>
+              <span>Use the public issue tracker for privacy or support-related requests.</span>
+            </a>
+            <a class="resource-card" href="index.html">
+              <strong>Return to Support</strong>
+              <span>Go back to the main support page for troubleshooting and FAQ content.</span>
+            </a>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <div>
+        <p class="footer-title">SpendTrail Privacy Policy</p>
+        <p class="footer-copy">Last aligned to release documentation on March 9, 2026.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Support</a>
+        <a href="https://github.com/keaz/spendtrail-support/issues" target="_blank" rel="noreferrer">Issue Tracker</a>
+        <a href="https://keaz.github.io/" target="_blank" rel="noreferrer">keaz.github.io</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

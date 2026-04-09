@@ -2,7 +2,13 @@
 
 Public GitHub Pages support site for the SpendTrail iOS app.
 
-Planned URLs:
+Published URLs:
 
 - Support URL: `https://keaz.github.io/spendtrail-support/`
 - Privacy Policy URL: `https://keaz.github.io/spendtrail-support/privacy.html`
+
+Implementation notes:
+
+- Static HTML and CSS only.
+- Visual language aligned to `https://keaz.github.io/`.
+- Content aligned to the SpendTrail app implementation and `SpendTrail/docs/release/privacy-policy.md`.
