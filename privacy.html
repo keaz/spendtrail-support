@@ -31,6 +31,7 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="#overview">Overview</a>
         <a href="#data">Data</a>
+        <a href="#ai">AI</a>
         <a href="#use">Use</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -125,6 +126,32 @@
             Your data remains on your device until you delete it. If iCloud sync is enabled, synced
             records remain in your private iCloud storage until they are deleted from the app and synced again.
           </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="ai">
+      <div class="site-shell dual-grid">
+        <article class="panel detail-panel">
+          <p class="section-kicker">AI Features</p>
+          <h2>How weekly AI insights work</h2>
+          <ul class="detail-list">
+            <li>SpendTrail can optionally generate weekly narrative insights on eligible iPhones.</li>
+            <li>The app first computes a deterministic weekly analytics payload from your expense records, top categories, anomaly signals, and forecast data.</li>
+            <li>When the feature is enabled and the device supports it, the app uses Apple Foundation Models through the on-device system language model to produce a short summary, concise observations, and suggested actions.</li>
+            <li>The generated narrative can be saved as an insight digest for later display in the app and companion experiences.</li>
+          </ul>
+        </article>
+
+        <article class="panel detail-panel">
+          <p class="section-kicker">AI Privacy</p>
+          <h2>What this codebase shows</h2>
+          <ul class="detail-list">
+            <li>The current code uses Apple’s on-device Foundation Models API rather than a custom third-party remote AI service for weekly insight generation.</li>
+            <li>The AI feature is optional and user-controlled through Settings.</li>
+            <li>If the device is not eligible, the model is not ready, the locale is unsupported, or Apple Intelligence is disabled, the narrative is not generated.</li>
+            <li>SpendTrail continues to provide deterministic analytics even when the AI narrative feature is unavailable.</li>
+          </ul>
         </article>
       </div>
     </section>

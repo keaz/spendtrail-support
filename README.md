@@ -12,3 +12,4 @@ Implementation notes:
 - Static HTML and CSS only.
 - Visual language aligned to `https://keaz.github.io/`.
 - Content aligned to the SpendTrail app implementation and `SpendTrail/docs/release/privacy-policy.md`.
+- AI copy aligned to the current on-device Foundation Models integration in the app code.

@@ -30,6 +30,7 @@
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#product">Product</a>
+        <a href="#ai">AI</a>
         <a href="#implementation">Implementation</a>
         <a href="#support">Support</a>
         <a href="#faq">FAQ</a>
@@ -101,6 +102,10 @@
               <h3>Operational details</h3>
               <p>Support-facing behavior includes sync diagnostics, optional place guardrails, duplicate repair, and release documentation for App Store submission.</p>
             </article>
+            <article class="stack-card">
+              <h3>AI layer</h3>
+              <p>Eligible iPhones can generate on-device weekly narrative insights from deterministic spend analytics using Apple Foundation Models and Apple Intelligence.</p>
+            </article>
           </div>
         </aside>
       </div>
@@ -151,9 +156,36 @@
           <article class="panel feature-card">
             <p class="card-label">Insights</p>
             <h3>Forecasts and advanced analytics</h3>
-            <p>The implementation includes spend forecasting, recurring-pattern detection, anomaly alerts for saved places, and optional weekly insight generation when supported.</p>
+            <p>The implementation includes spend forecasting, recurring-pattern detection, anomaly alerts for saved places, and optional weekly AI narrative generation when supported.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="ai">
+      <div class="site-shell dual-grid">
+        <article class="panel detail-panel">
+          <p class="section-kicker">AI Capabilities</p>
+          <h2>What the app actually uses AI for</h2>
+          <ul class="detail-list">
+            <li>SpendTrail builds a deterministic weekly insight payload from your recorded expenses before any AI generation happens.</li>
+            <li>That payload includes weekly totals, average-per-day, largest day, top categories, anomaly signals, week-over-week change, and forecast confidence.</li>
+            <li>On eligible iPhones, users can enable weekly AI insights in Settings.</li>
+            <li>When enabled, the app uses Apple Foundation Models through the system language model to generate a short narrative summary, up to three observations, and up to three suggested actions.</li>
+            <li>The prompts explicitly tell the model not to invent exact numbers, dates, currencies, or totals and to rely only on the serialized payload.</li>
+          </ul>
+        </article>
+
+        <article class="panel detail-panel">
+          <p class="section-kicker">Availability</p>
+          <h2>How the AI feature is gated</h2>
+          <ul class="detail-list">
+            <li>The AI narrative path is gated behind <code>FoundationModels</code> support and iOS 26 availability in the current build.</li>
+            <li>The app checks whether the current locale is supported and whether Apple Intelligence is enabled on the device.</li>
+            <li>If the device is not eligible, the model is not ready, the locale is unsupported, or the user disables the feature, SpendTrail falls back to deterministic insights without generating a narrative.</li>
+            <li>Generated narratives are saved as an insight digest and can be surfaced later, including in the Apple Watch companion.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -168,6 +200,7 @@
             <li>When available, CloudKit sync uses the private container <code>iCloud.com.keaz.SpendTrail</code>.</li>
             <li>Charts powers trend and breakdown views, while MapKit supports place search, maps, and location-based grouping.</li>
             <li>The watchOS companion shares the same domain model and exposes quick-log, home dashboard, and sync status flows.</li>
+            <li>The AI narrative feature uses the on-device system language model rather than a custom remote AI backend in this codebase.</li>
           </ul>
         </article>
 
@@ -242,8 +275,23 @@
           </details>
 
           <details class="faq-item">
+            <summary>What AI features does SpendTrail use?</summary>
+            <p>SpendTrail can generate a weekly natural-language insight summary on eligible iPhones using Apple Foundation Models and Apple Intelligence. The narrative is based on a deterministic weekly analytics payload, not free-form model guesses.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does AI generation depend on Apple Intelligence?</summary>
+            <p>Yes. The current implementation checks device eligibility, Apple Intelligence state, locale support, and model readiness before generating the weekly narrative. If those checks fail, the app keeps deterministic insights without the AI summary.</p>
+          </details>
+
+          <details class="faq-item">
             <summary>Does the Apple Watch app work as a companion?</summary>
-            <p>Yes. The Apple Watch experience is designed around quick logging and a compact daily overview, using the same synced data model when iCloud is available.</p>
+            <p>Yes. The Apple Watch experience is designed around quick logging and a compact daily overview, using the same synced data model when iCloud is available. It can also surface a stored insight digest generated on iPhone.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does SpendTrail send my expense data to an external AI service?</summary>
+            <p>The AI code in this project uses Apple’s on-device Foundation Models system API on supported iPhones. This codebase does not show a separate custom cloud AI integration for weekly insight generation.</p>
           </details>
 
           <details class="faq-item">
